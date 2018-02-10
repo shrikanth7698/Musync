@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:isScrollContainer="false"
+    tools:context="com.shrikanthravi.slidinguppanel.PartyActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/cld3"
+        android:layout_marginLeft="140dp"
+        android:id="@+id/cld1"
+        android:layout_alignParentLeft="true" />
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/cld2"
+        android:src="@drawable/cld2"/>
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/cld3"
+        android:src="@drawable/cld1"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="100dp"
+        android:padding="10dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/cld4"
+        android:src="@drawable/cld1"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/messageLL"
+            android:id="@+id/messageRV"></android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/messageLL"
+        android:orientation="horizontal"
+        android:weightSum="1">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp"
+        android:layout_weight="0.95"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corners"
+        android:hint="Type a message"
+        android:id="@+id/messageET"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="5dp"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/sendBTN"
+            android:layout_weight="0.05"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/send1"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
