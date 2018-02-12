@@ -1,6 +1,8 @@
 # Musync
 This is an app which lets you sync your currently playing music realtime with your friend through hotspot
 
+https://shrikanth7698.github.io/Musync/
+
 <table>
 <tr>
     <td>
