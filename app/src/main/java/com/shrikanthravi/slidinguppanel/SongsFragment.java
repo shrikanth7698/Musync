@@ -190,7 +190,9 @@ public class SongsFragment extends Fragment {
 
                     String thisTitle = musicCursor.getString(titleColumn);
                     String thisArtist = musicCursor.getString(artistColumn);
-                    Bitmap songImage = BitmapFactory.decodeResource(getResources(),(R.drawable.slidingpanelimage));
+                    BitmapFactory.Options opt = new BitmapFactory.Options();
+                    opt.inSampleSize = 2;
+                    Bitmap songImage = BitmapFactory.decodeResource(getResources(),(R.drawable.slidingpanelimage),opt);
                     String album = musicCursor.getString(albumColumn);
                     if(album==null){
                         album="#";

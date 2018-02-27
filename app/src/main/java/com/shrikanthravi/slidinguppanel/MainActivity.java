@@ -619,8 +619,16 @@ public class MainActivity extends AppCompatActivity implements MediaController.M
     @Override
     protected void onStop() {
         controller.hide();
+
         super.onStop();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbindService(musicConnection);
+    }
+
     private void playNext(){
         musicSrv.playNext();
         if(playbackPaused){
